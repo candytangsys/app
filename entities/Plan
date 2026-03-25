@@ -1,0 +1,50 @@
+{
+  "name": "Plan",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Plan title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Plan description"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date yyyy-MM-dd"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "End date yyyy-MM-dd"
+    },
+    "day_start": {
+      "type": "string",
+      "default": "09:00",
+      "description": "Available start time HH:mm"
+    },
+    "day_end": {
+      "type": "string",
+      "default": "22:00",
+      "description": "Available end time HH:mm"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed",
+        "archived"
+      ],
+      "default": "active"
+    },
+    "color": {
+      "type": "string",
+      "description": "Plan accent color"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}
